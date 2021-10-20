@@ -43,9 +43,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ShimmerAnimationView() {
     val colors = listOf(
-        Color.Gray.copy(alpha = 0.9f),
-        Color.Gray.copy(alpha = 0.2f),
-        Color.Gray.copy(alpha = 0.9f)
+        Color.LightGray.copy(alpha = 0.9f),
+        Color.LightGray.copy(alpha = 0.2f),
+        Color.LightGray.copy(alpha = 0.9f)
     )
 
     val transient = rememberInfiniteTransition()
@@ -59,9 +59,6 @@ fun ShimmerAnimationView() {
             repeatMode = RepeatMode.Restart
         )
     )
-    LaunchedEffect(true) {
-
-    }
 
     val brush = Brush.linearGradient(
         colors = colors,
